@@ -9,17 +9,22 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-
+        <a-marker type="custom" url="pattern-code.patt">
+            <!-- 3D content to display when the marker is detected -->
+            <a-box position="0 0.5 0" rotation="0 45 0" color="green"></a-box>
+            <a-text value="Custom Marker" position="0 1 0" align="center" color="white"></a-text>
+        </a-marker>
+<!-- 
         <a-assets>
             <img id="earth-sphere" src="earth-sphere.jpg" />
-        </a-assets>
+        </a-assets> -->
 
-        <a-marker type="pattern" url="pattern-code.patt">
+        <!-- <a-marker type="pattern" url="pattern-code.patt">
             <a-sphere position="0 0.5 0" 
                    material="src: #earth-sphere; transparent: true; opacity: 0.95;"
                    animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
             </a-sphere>
-        </a-marker>
+        </a-marker> -->
 
         <a-entity camera></a-entity>
     </a-scene>
