@@ -11,13 +11,14 @@
     <a-scene  arjs>
 
         <a-assets> 
-            <img id="user" src="user.png" />
+            <a-assets-item id="user" src="user.png" />
         </a-assets>
         <a-marker type="custom" url="/pattern-user.path">
-            <a-sphere position="0 0.5 0" 
+            <a-entity gltf-model="#user" scale="0.5 0.5 0.5"></a-entity>
+            <!-- <a-sphere position="0 0.5 0" 
                    material="src: #user; transparent: true; opacity: 0.95;"
                    animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
-            </a-sphere>
+            </a-sphere> -->
         </a-marker>
         <a-entity camera></a-entity>
         
