@@ -8,17 +8,17 @@
     <title>Custom markers</title>
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <a-scene  arjs>
+    <a-scene umbedded arjs>
 
         <a-assets> 
-            <a-assets-item id="user" src="user.png" />
+            <img id="code" src="code.png" />
         </a-assets>
-        <a-marker type="custom" url="/pattern-user.path">
+        <a-marker type="custom" url="/pattern-code.path">
             <a-entity gltf-model="#user" scale="0.5 0.5 0.5"></a-entity>
-            <!-- <a-sphere position="0 0.5 0" 
-                   material="src: #user; transparent: true; opacity: 0.95;"
+            <a-sphere position="0 0.5 0" 
+                   material="src: #code; transparent: true; opacity: 0.95;"
                    animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
-            </a-sphere> -->
+            </a-sphere>
         </a-marker>
         <a-entity camera></a-entity>
         
