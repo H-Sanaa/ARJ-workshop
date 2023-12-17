@@ -9,12 +9,18 @@
 </head>
 <body>
     <a-scene embedded arjs>
-        <a-entity scale="2 2 2">
-            <a-marker type="pattern" url="pattern-hiro.patt">
-                <a-entity gltf-model="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bonappetit.com%2Fstory%2Fhow-to-ripen-avocados-when-theyre-too-hard&psig=AOvVaw0MdwZmOSRRGISz-pb5wAcv&ust=1702900610645000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDo5Ka1loMDFQAAAAAdAAAAABAD" scale="6 6 6"></a-entity> 
+        <a-assets>
+            <img id="avoca" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bonappetit.com%2Fstory%2Fhow-to-ripen-avocados-when-theyre-too-hard&psig=AOvVaw0MdwZmOSRRGISz-pb5wAcv&ust=1702900610645000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDo5Ka1loMDFQAAAAAdAAAAABAD" >
+        </a-assets>
+        
+        <a-marker type="pattern" url="pattern-hiro.patt">
+            <a-sphere position="0 0.5 0" 
+            material="src: #avoca; transparent: true; opacity: 0.95;"
+            animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
+            </a-sphere>
+            <a-entity scale="2 2 2">   
             </a-marker>
-           
-        </a-entity>
+
         <a-entity camera ></a-entity>
 
     </a-scene>
